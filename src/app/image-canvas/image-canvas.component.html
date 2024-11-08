@@ -8,11 +8,14 @@
   <input type="file" (change)="loadImage($event)" accept="image/*" />
 
   <!-- Buttons for functionalities -->
-  <!--<button (click)="enableCut()">Enable Cut</button>-->
   <button (click)="rotateImage(90)">Rotate 90°</button>
+  <button (click)="removeBorder()">Remove Border</button>
   <button (click)="deskewImageAutomatically()">Deskew Automatically</button>
   <button (click)="applyEffect('darken')">Darken</button>
   <button (click)="applyEffect('lighten')">Lighten</button>
+  <button (click)="revertToPreviousState()">Previous Stage</button>
+  <button (click)="applyDarkenTextOnlyInSelection()" [disabled]="!isSelectionMade">Darken Selected Area</button>
+
 
   <!-- Instruction for selecting area -->
   <p>Click and drag on the image to select an area for cutting or effects.</p>
