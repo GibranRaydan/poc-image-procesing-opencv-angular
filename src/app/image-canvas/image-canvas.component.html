@@ -1,0 +1,19 @@
+<div class="image-container">
+  <!-- Canvas to display the image -->
+  <canvas #imageCanvas></canvas>
+</div>
+
+<div class="controls">
+  <!-- Input to load an image -->
+  <input type="file" (change)="loadImage($event)" accept="image/*" />
+
+  <!-- Buttons for functionalities -->
+  <!--<button (click)="enableCut()">Enable Cut</button>-->
+  <button (click)="rotateImage(90)">Rotate 90°</button>
+  <button (click)="deskewImageAutomatically()">Deskew Automatically</button>
+  <button (click)="applyEffect('darken')">Darken</button>
+  <button (click)="applyEffect('lighten')">Lighten</button>
+
+  <!-- Instruction for selecting area -->
+  <p>Click and drag on the image to select an area for cutting or effects.</p>
+</div>

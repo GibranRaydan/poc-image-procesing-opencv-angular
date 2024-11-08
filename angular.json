@@ -27,6 +27,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -45,11 +46,13 @@
                   "maximumError": "4kB"
                 }
               ],
+              "aot": true,
               "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
+              "aot": true,
               "sourceMap": true
             }
           },
@@ -85,6 +88,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -92,5 +96,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "eda085b1-47f4-4e0d-a447-d3a487c4f35d"
   }
 }
