@@ -5,7 +5,10 @@
 }
 
 canvas {
-  border: 1px solid #000;
+  border: 25px solid;
+  border-color: gray;
+  width: 450px; /* Display width */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .controls {

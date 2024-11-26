@@ -5,17 +5,32 @@
 
 <div class="controls">
   <!-- Input to load an image -->
-  <input type="file" (change)="loadImage($event)" accept="image/*" />
+  <!--<input type="file" (change)="loadImage($event)" accept="image/*" />-->
+  <div>
+    <input type="file" webkitdirectory (change)="loadFolder($event)" />
+  </div>
 
-  <!-- Buttons for functionalities -->
-  <button (click)="rotateImage(90)">Rotate 90°</button>
+  <div class="navigation">
+    <button (click)="prevPage()">Previous</button>
+    <button (click)="nextPage()">Next</button>
+  </div>
+
+  <div class="btn-group" style="display: flex; flex-direction:row">
+
+    <!-- Buttons for functionalities -->
+    <!--<button (click)="rotateImage(90)">Rotate 90°</button>
   <button (click)="removeBorder()">Remove Border</button>
   <button (click)="deskewImageAutomatically()">Deskew Automatically</button>
   <button (click)="applyEffect('darken')">Darken</button>
   <button (click)="applyEffect('lighten')">Lighten</button>
-  <button (click)="revertToPreviousState()">Previous Stage</button>
-  <button (click)="applyDarkenTextOnlyInSelection()" [disabled]="!isSelectionMade">Darken Selected Area</button>
+  <button (click)="applyDarkenTextOnlyInSelection()" [disabled]="!isSelectionMade">Darken Selected Area</button>-->
+    <!--<button (click)="revertToPreviousState()">Previous Stage</button>-->
+    <button (click)="deskewImageAutomatically()">Deskew Automatically</button>
+    <button (click)="previousStage()">Previous Stage</button>
+    
 
+  </div>
+  <button (click)="downloadPngs()">Download All PNGs</button>
 
   <!-- Instruction for selecting area -->
   <p>Click and drag on the image to select an area for cutting or effects.</p>
